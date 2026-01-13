@@ -1,11 +1,10 @@
-
 <?php
     $controllers = array(
         'account' => ['login', 'register', 'logout', 'changePassword', 'updateProfile'],
         'home' => ['index', 'error','user'],
         'payment' => ['thanhtoan', 'thanhtoan_tienmat'],
         'about' => ['index'],
-        'contact' => ['index'],
+        'contact' => ['index', 'send'],
         'cart' => ['index', 'add', 'remove'],
         'order' => ['success','placeOrder','checkout', 'history', 'detail'],
         'product' => ['index','search','detail'],
@@ -17,6 +16,7 @@
                 'orderManage' => ['index'],
                 'add_productManage' => ['index'],
                 'edit_productManage' => ['index'],
+                'contactManage' => ['index', 'delete'],
             )
 
     ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.

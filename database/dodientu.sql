@@ -318,6 +318,20 @@ INSERT INTO `reviews` (`id`, `user_id`, `product_id`, `rating`, `comment`) VALUE
 
 -- --------------------------------------------------------
 
+-- Cấu trúc cho bảng contacts`
+--
+
+CREATE TABLE contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    product_id INT DEFAULT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- --------------------------------------------------------
+
 --
 -- Cấu trúc bảng cho bảng `role`
 --
@@ -362,8 +376,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `phone`, `address`, `username`, `password`, `account_status`, `role_id`, `created_at`, `updated_at`, `gender`, `remember_token`) VALUES
-(2, 'Admin', 'admin@example.com', '', '', 'admin', '123', 'Active', 2, '2025-09-12 12:14:25', '2025-11-12 15:19:52', 'Other', NULL),
-(47, NULL, 'huy@gmail.com', NULL, NULL, 'huy', '123', NULL, NULL, '2025-11-12 15:20:35', '2025-11-12 15:20:35', 'Other', NULL);
+(1, 'Admin', 'admin@example.com', '', '', 'admin', '123', 'Active', 2, '2025-09-12 12:14:25', '2025-11-12 15:19:52', 'Other', NULL),
+(2, 'Huy', 'huy@gmail.com', NULL, NULL, 'huy', '123', NULL, NULL, '2025-11-12 15:20:35', '2025-11-12 15:20:35', 'Other', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
